@@ -9,6 +9,8 @@
 ▶ BLOOD.DROP // P2P FILE TRANSFER
 ```
 
+![BLOOD.DROP](screenshot.png)
+
 ---
 
 **Drop files between devices on your local network.**
