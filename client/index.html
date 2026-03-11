@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLOOD.DROP // P2P FILE TRANSFER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <input type="file" id="fileInput" style="display:none;" />
+    <input type="file" id="shareFileInput" style="display:none;" />
+
+    <div class="scanlines"></div>
+
+    <!-- EVIL — diagonal top-left -->
+    <pre class="evil-text">
+███████╗██╗   ██╗██╗██╗
+██╔════╝██║   ██║██║██║
+█████╗  ╚██╗ ██╔╝██║██║
+██╔══╝   ╚████╔╝ ██║██║
+███████╗  ╚██╔╝  ██║███████╗
+╚══════╝   ╚═╝   ╚═╝╚══════╝</pre>
+
+    <!-- Goat head — top-right -->
+    <pre class="blood-drops">
+  /|     |\
+ / |     | \
+|  (o   o)  |
+ \   {^}   /
+  \  ~~~  /
+   \-----/</pre>
+
+    <!-- Radar -->
+    <main>
+      <div class="radar-container">
+        <div class="my-profile">
+          <div class="avatar my-avatar">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="my-name-tag">
+            <span id="myName">LOADING...</span>
+            <span class="label">// YOU</span>
+          </div>
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+        </div>
+        <div id="peersContainer"></div>
+      </div>
+    </main>
+
+    <!-- Bottom control bar -->
+    <footer class="control-bar">
+      <div class="logo">▶ BLOOD.DROP</div>
+      <div class="bar-actions">
+        <button class="share-link-btn" id="shareLinkBtn">[SHARE LINK]</button>
+        <div class="status">
+          <div class="status-indicator offline" id="connectionStatusIndicator"></div>
+          <span id="connectionStatusText">INIT...</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+      <div class="modal">
+        <h3 id="modalTitle">INCOMING FILE</h3>
+        <div class="modal-content" id="modalContent"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
